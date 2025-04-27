@@ -23,7 +23,7 @@ fetchData(true).then((result) => {
 );
 
 
-// 2. async/await + try-catch
+// 2. async-await + try-catch
 // async-await adalah cara yang lebih modern dan rapi untuk bekerja dengan Promise.
 // Fungsi harus diberi async supaya bisa menggunakan await.
 // await akan "menunggu" hasil dari Promise sebelum lanjut ke baris berikutnya.
@@ -40,3 +40,12 @@ const asyncData = async() => {
   };
   
 asyncData();
+
+
+// Hanya async-await tanpa handling untuk error
+async function doingProcess(){
+  const result = await fetchData(true)
+  console.log(result)
+}
+
+doingProcess()
