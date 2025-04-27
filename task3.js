@@ -12,8 +12,8 @@ async function fetchData() {
 
 async function processUsers() {
   const users = await fetchData();
-a
-// fetchData().then(users => {  bisa pakai .then langsung
+
+// fetchData().then(users => { bisa pakai .then langsung tanpa async-await
 
   const nameDomicile = users.map(user => ({
     name: user.name,
@@ -27,6 +27,6 @@ a
   console.log(nameDomicile);
 };
 
-// );
+// ) kurung buat .then
 
 processUsers()
